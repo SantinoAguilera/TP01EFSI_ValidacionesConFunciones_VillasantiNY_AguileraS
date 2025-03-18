@@ -24,7 +24,7 @@ function verifyForm(func)
     }
     else{
         switch (func) {
-            case 'averageNotes':
+            case 'averageNote':
                 averageNote();
                 break;
             case 'highestScore':
@@ -41,7 +41,7 @@ function averageNote()
     let matematica = document.getElementById("matematica").value;
     let lengua = document.getElementById("lengua").value;
     let efsi = document.getElementById("efsi").value;
-    
+
     matematica = parseFloat(matematica);
     lengua = parseFloat(lengua);
     efsi = parseFloat(efsi);
