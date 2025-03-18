@@ -46,10 +46,63 @@ function averageNote()
     
     matematica = parseFloat(matematica);
     lengua = parseFloat(lengua);
-    efsi = parseFloat(efsi)
+    efsi = parseFloat(efsi);
 
     let average = (matematica + lengua + efsi) / 3;
     document.getElementById("resultado").innerHTML = 'El promedio de notas es: ' + average;
+}
+
+function highestScore()
+{
+    let matematica = document.getElementById("matematica").value;
+    let lengua = document.getElementById("lengua").value;
+    let efsi = document.getElementById("efsi").value;
+    let bestScore = "";
+
+    matematica = parseFloat(matematica);
+    lengua = parseFloat(lengua);
+    efsi = parseFloat(efsi);
+    
+    if (matematica == lengua && matematica == efsi)
+    {
+        document.getElementById("resultado").innerHTML = 'Todas las notas son iguales.';
+    }
+    else
+    {
+        if (matematica > lengua && matematica > efsi)
+        {
+            if (bestScore == "")
+            {
+                bestScore = "Matematica"
+            }
+        }
+
+        if (lengua > matematica && lengua > efsi)
+        {
+            if (bestScore == "")
+            {
+                bestScore = "Lengua"
+            }
+            else
+            {
+                bestScore += " y Lengua"
+            }
+        }
+
+        if (efsi > lengua && efsi > matematica)
+        {
+            if (bestScore == "")
+            {
+                bestScore = "Lengua"
+            }
+            else
+            {
+                bestScore += " y Lengua"
+            }
+        }
+
+        document.getElementById("resultado").innerHTML = 'Las mejores notas fueron: ' + bestScore;
+    }
 }
 
 function verifyForm(func)
