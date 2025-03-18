@@ -19,11 +19,15 @@ function verifyForm(func)
     let matematica = document.getElementById("matematica").value;
     let lengua = document.getElementById("lengua").value;
     let efsi = document.getElementById("efsi").value;
-    if (matematica > 10 || matematica < 1 || lengua > 10 || lengua < 1 || efsi > 10 || efsi < 1) {
+
+    if (matematica > 10 || matematica < 1 || lengua > 10 || lengua < 1 || efsi > 10 || efsi < 1)
+    {
         alert("Los valores tienen que estar entre 1 y 10");
     }
-    else{
-        switch (func) {
+    else
+    {
+        switch (func)
+        {
             case 'averageNote':
                 averageNote();
                 break;
@@ -67,7 +71,7 @@ function highestScore()
     }
     else
     {
-        if (matematica > lengua && matematica > efsi)
+        if (matematica >= lengua && matematica >= efsi)
         {
             if (bestScore == "")
             {
@@ -75,7 +79,7 @@ function highestScore()
             }
         }
 
-        if (lengua > matematica && lengua > efsi)
+        if (lengua >= matematica && lengua >= efsi)
         {
             if (bestScore == "")
             {
@@ -87,7 +91,7 @@ function highestScore()
             }
         }
 
-        if (efsi > lengua && efsi > matematica)
+        if (efsi >= lengua && efsi >= matematica)
         {
             if (bestScore == "")
             {
@@ -98,6 +102,8 @@ function highestScore()
                 bestScore += " y EFSI"
             }
         }
+
+
 
         document.getElementById("resultado").innerHTML = 'Las mejores notas fueron: ' + bestScore;
     }
