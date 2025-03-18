@@ -10,10 +10,12 @@
         <input type="text" name="matematica" id="matematica" onkeyup="verifyMatematica()">
         <input type="text" name="lengua" id="lengua" onkeyup="verifyLengua()">
         <input type="text" name="efsi" id="efsi" onkeyup="verifyEFSI()">
-        <button type="button" name="averageNotes" id="averageNotes" onclick="verifyForm('averageNotes')">Calcular Promedio</button>
+        <button type="button" name="averageNotes" id="averageNotes" onclick="verifyForm('averageNote')">Calcular Promedio</button>
         <button type="button" name="highestScore" id="highestScore" onclick="verifyForm('highestScore')">Mostrar la Materia con Mejor Nota</button>
-        <div></div>
     </form>
+    <div>
+        <p id="resultado"></p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
