@@ -1,35 +1,48 @@
-function verifyMatematica(){
-    let nota = document.getElementById("matematica");
-    if(nota.value >= 1 && nota.value <= 10){
-        nota.style.color = "green";
-    }
-    else{
-        nota.style.color = "red";
-    }
-}
-function verifyLengua(){
-    let nota = document.getElementById("lengua");
-    if(nota.value >= 1 && nota.value <= 10){
-        nota.style.color = "green";
-    }
-    else{
-        nota.style.color = "red";
-    }
-}
-function verifyEFSI(){
-    let nota = document.getElementById("efsi");
-    if(nota.value >= 1 && nota.value <= 10){
-        nota.style.color = "green";
-    }
-    else{
-        nota.style.color = "red";
-    }
-}
-function averageNotes()
+function verifyMatematica()
 {
-    const matematica = document.getElementById("matematica").value;
-    const lengua = document.getElementById("lengua").value;
-    const efsi = document.getElementById("efsi").value;
+    let nota = document.getElementById("matematica");
+
+    if(nota.value >= 1 && nota.value <= 10)
+    {
+        nota.style.color = "green";
+    }
+    else
+    {
+        nota.style.color = "red";
+    }
+}
+
+function verifyLengua()
+{
+    let nota = document.getElementById("lengua");
+    if (nota.value >= 1 && nota.value <= 10)
+    {
+        nota.style.color = "green";
+    }
+    else
+    {
+        nota.style.color = "red";
+    }
+}
+
+function verifyEFSI()
+{
+    let nota = document.getElementById("efsi");
+    if (nota.value >= 1 && nota.value <= 10)
+    {
+        nota.style.color = "green";
+    }
+    else
+    {
+        nota.style.color = "red";
+    }
+}
+
+function averageNote()
+{
+    let matematica = document.getElementById("matematica").value;
+    let lengua = document.getElementById("lengua").value;
+    let efsi = document.getElementById("efsi").value;
     let error = false;
 
     if (matematica.trim().length === 0)
@@ -50,9 +63,13 @@ function averageNotes()
         console.log("Error: efsi Has No Value")
     }
 
+    matematica = parseFloat(matematica);
+    lengua = parseFloat(lengua);
+    efsi = parseFloat(efsi)
+
     if (!error)
     {
-        let average = matematica + lengua + efsi;
-        document.getElementById("div").innerHTML = "El promedio de notas es: " + average;
+        let average = (matematica + lengua + efsi) / 3;
+        resultado.innerHTML = 'El promedio de notas es: ' + average;
     }
 }
