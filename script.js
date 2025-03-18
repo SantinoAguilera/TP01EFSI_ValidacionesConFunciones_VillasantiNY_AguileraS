@@ -14,6 +14,28 @@ function verify(input)
     }
 }
 
+function verifyForm(func)
+{
+    let matematica = document.getElementById("matematica").value;
+    let lengua = document.getElementById("lengua").value;
+    let efsi = document.getElementById("efsi").value;
+    if (matematica > 10 || matematica < 1 || lengua > 10 || lengua < 1 || efsi > 10 || efsi < 1) {
+        alert("Los valores tienen que estar entre 1 y 10");
+    }
+    else{
+        switch (func) {
+            case 'averageNotes':
+                averageNote();
+                break;
+            case 'highestScore':
+                highestScore();
+                break;
+            default:
+                break;
+        }
+    }
+}
+
 function averageNote()
 {
     let matematica = document.getElementById("matematica").value;
@@ -78,27 +100,5 @@ function highestScore()
         }
 
         document.getElementById("resultado").innerHTML = 'Las mejores notas fueron: ' + bestScore;
-    }
-}
-
-function verifyForm(func)
-{
-    let matematica = document.getElementById("matematica").value;
-    let lengua = document.getElementById("lengua").value;
-    let efsi = document.getElementById("efsi").value;
-    if (matematica > 10 || matematica < 1 || lengua > 10 || lengua < 1 || efsi > 10 || efsi < 1) {
-        alert("Los valores tienen que estar entre 1 y 10");
-    }
-    else{
-        switch (func) {
-            case 'averageNotes':
-                averageNote();
-                break;
-            case 'highestScore':
-                highestScore();
-                break;
-            default:
-                break;
-        }
     }
 }
