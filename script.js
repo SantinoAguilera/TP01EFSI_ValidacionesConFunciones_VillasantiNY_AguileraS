@@ -58,7 +58,7 @@ function verifyForm(func)
     let lengua = document.getElementById("lengua").value;
     let efsi = document.getElementById("efsi").value;
     if (matematica > 10 || matematica < 1 || lengua > 10 || lengua < 1 || efsi > 10 || efsi < 1) {
-        alert("Completa todo el formulario");
+        alert("Los valores tienen que estar entre 1 y 10");
     }
     else{
         switch (func) {
