@@ -91,11 +91,11 @@ function highestScore()
         {
             if (bestScore == "")
             {
-                bestScore = "Lengua"
+                bestScore = "EFSI"
             }
             else
             {
-                bestScore += " y Lengua"
+                bestScore += " y EFSI"
             }
         }
 
