@@ -8,16 +8,18 @@
 <body>
     <form>
         <h2>Notas</h2>
-        <input type="text" name="matematica" id="matematica" placeholder="Matematica" onkeyup="verifyMatematica()">
-        <input type="text" name="lengua" id="lengua" placeholder="Lengua" onkeyup="verifyLengua()">
-        <input type="text" name="efsi" id="efsi" placeholder="EFSI" onkeyup="verifyEFSI()">
+        <input type="text" name="matematica" id="matematica" placeholder="Matematica" onkeyup="verify('matematica')">
+        <input type="text" name="lengua" id="lengua" placeholder="Lengua" onkeyup="verify('lengua')">
+        <input type="text" name="efsi" id="efsi" placeholder="EFSI" onkeyup="verify('efsi')">
         <br><br>
         <button type="button" name="averageNotes" id="averageNotes" onclick="verifyForm('averageNote')">Calcular Promedio</button>
         <button type="button" name="highestScore" id="highestScore" onclick="verifyForm('highestScore')">Mostrar la Materia con Mejor Nota</button>
     </form>
+    <br>
     <div>
         <p id="resultado"></p>
     </div>
+    <img src="" alt="My genuine reaction:" id="reaction">
     <script src="script.js"></script>
 </body>
 </html>
