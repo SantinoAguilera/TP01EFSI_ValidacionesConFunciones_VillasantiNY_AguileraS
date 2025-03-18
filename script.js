@@ -1,3 +1,4 @@
+const img = document.getElementById("reaction");
 function verify(input)
 {
     let nota = document.getElementById(input);
@@ -61,6 +62,7 @@ function highestScore()
     lengua = parseFloat(lengua);
     efsi = parseFloat(efsi);
     
+    document.getElementById("resultado").style.color = "blue";
     if (matematica == lengua && matematica == efsi)
     {
         document.getElementById("resultado").innerHTML = 'Todas las notas son iguales.';
