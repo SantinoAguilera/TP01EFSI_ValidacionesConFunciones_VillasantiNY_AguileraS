@@ -51,7 +51,14 @@ function averageNote()
     lengua = parseFloat(lengua);
     efsi = parseFloat(efsi);
 
-    let average = (matematica + lengua + efsi) / 3;
+    let average = Math.floor((matematica + lengua + efsi) / 3);
+    if (average >= 6) {
+        document.getElementById("resultado").style.color = "green";
+        img.src = "ultrakill-sisyphus-prime.gif";
+    } else {
+        document.getElementById("resultado").style.color = "red";
+        img.src = "ultrakill-v1.gif";
+    }
     document.getElementById("resultado").innerHTML = 'El promedio de notas es: ' + average;
 }
 
@@ -70,9 +77,11 @@ function highestScore()
     if (matematica == lengua && matematica == efsi)
     {
         document.getElementById("resultado").innerHTML = 'Todas las notas son iguales.';
+        img.src = "ballin.gif";
     }
     else
     {
+        img.src = "good-job.gif"
         if (matematica >= lengua && matematica >= efsi)
         {
             if (bestScore == "")
@@ -90,6 +99,7 @@ function highestScore()
             else
             {
                 bestScore += " y Lengua"
+                img.src = "pretty-good-job.gif";
             }
         }
 
@@ -102,10 +112,9 @@ function highestScore()
             else
             {
                 bestScore += " y EFSI"
+                img.src = "pretty-good-job.gif";
             }
         }
-
-
 
         document.getElementById("resultado").innerHTML = 'Las mejores notas fueron: ' + bestScore;
     }
