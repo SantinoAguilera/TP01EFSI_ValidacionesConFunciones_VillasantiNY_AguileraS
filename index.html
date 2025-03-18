@@ -7,11 +7,12 @@
 </head>
 <body>
     <form>
-        <input type="text" name="matematica" id="matematica" onchange="verifyMatematica()">
-        <input type="text" name="lengua" id="lengua" onchange="verifyLengua()">
-        <input type="text" name="efsi" id="efsi" onchange="verifyEFSI()">
+        <input type="text" name="matematica" id="matematica" onkeyup="verifyMatematica()">
+        <input type="text" name="lengua" id="lengua" onkeyup="verifyLengua()">
+        <input type="text" name="efsi" id="efsi" onkeyup="verifyEFSI()">
         <button type="button" name="averageNotes" id="averageNotes" onclick="averageNotes()">Calcular Promedio</button>
         <button type="button" name="highestScore" id="highestScore" onclick="highestScore()">Mostrar la Materia con Mejor Nota</button>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
